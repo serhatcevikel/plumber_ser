@@ -1,9 +1,9 @@
-#FROM trestletech/plumber
-FROM gesiscss/binder-serhatcevikel-2dplumber-5fser-71bb3b:c17c3fe77bbe14862765b5dfb22f75058935e420
+FROM trestletech/plumber
+#FROM gesiscss/binder-serhatcevikel-2dplumber-5fser-71bb3b:c17c3fe77bbe14862765b5dfb22f75058935e420
 LABEL maintainer="serhatcevikel@yahoo.com"
 
-#RUN R -e "install.packages(c('httr', 'jsonlite', 'e1071', 'rpart'), \
-#repos = 'http://cran.us.r-project.org')"
+RUN R -e "install.packages(c('httr', 'jsonlite', 'e1071', 'rpart'), \
+repos = 'http://cran.us.r-project.org')"
 
 COPY ./plumber5.R /plumber5.R
 
